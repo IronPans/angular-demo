@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font: 15px/1.2 'Microsoft Yahei'; }
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px; }
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent; }
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.2); }
+
+::-webkit-scrollbar-corner {
+  display: block; }
+
+::-webkit-scrollbar-track:hover {
+  background-color: rgba(0, 0, 0, 0.15); }
+
+::-webkit-scrollbar-thumb:hover {
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.5); }
+
+button.btn {
+  padding: 10px;
+  background: blue;
+  color: #fff;
+  border-radius: 4px;
+  border: none; }
+
+.box {
+  padding: 10px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  margin: 10px; }
+  .box > h4 {
+    padding-bottom: 10px; }
+
+/*# sourceMappingURL=styles.css.map */

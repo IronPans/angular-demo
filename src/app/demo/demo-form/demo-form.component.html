@@ -1,0 +1,27 @@
+<div class="box">
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.form.valid)" novalidate>
+    <div>
+      <label>
+        用户：<input type="text" name="name" [(ngModel)]="name" required>
+      </label>
+      <p *ngIf="userForm.controls['name']?.invalid" class="error">用户名必填</p>
+    </div>
+    <div>
+      <label>
+        电话：<input type="text" name="tel" [(ngModel)]="tel" pattern="1[3|5|8]\d{9}" required>
+      </label>
+    </div>
+   <div>
+     <label>
+       性别：
+       <select [(ngModel)]="sex" name="sex" required #sexInput="ngModel">
+         <option value="man">男</option>
+         <option value="female">女</option>
+       </select>
+     </label>
+     <p *ngIf="sexInput.invalid" class="error">不合法</p>
+     <p *ngIf="sexInput.errors?.required" class="error">必填</p>
+   </div>
+    <button type="submit"  [disabled]="!userForm.form.valid">发布</button>
+  </form>
+</div>

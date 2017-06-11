@@ -1,0 +1,20 @@
+.card {
+  padding: 10px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  margin: 10px 0; }
+
+:host {
+  display: block;
+  margin: 10px 0;
+  background: #eee; }
+
+:host(.active) {
+  background: red; }
+
+:host-context(.theme-blue) {
+  color: blue; }
+
+/deep/ .card-header {
+  font-size: 25px; }
+
+/*# sourceMappingURL=card.component.css.map */

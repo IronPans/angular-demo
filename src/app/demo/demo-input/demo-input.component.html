@@ -1,0 +1,22 @@
+<div>
+  <app-card>
+    <app-card-header [title]="'这是Input输入'"></app-card-header>
+  </app-card>
+</div>
+<div>
+  <app-card>
+    <app-card-header [content]="'这是另外一种方式声明输入属性'"></app-card-header>
+  </app-card>
+</div>
+
+<div>
+  <app-card>
+    <app-card-header [count]="20"></app-card-header>
+  </app-card>
+</div>
+
+<div>
+  <app-card>
+    <app-card-footer (onChange)="onChange($event)"></app-card-footer>
+  </app-card>
+</div>

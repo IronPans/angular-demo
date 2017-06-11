@@ -1,0 +1,65 @@
+<div class="box">
+  <h4>DatePipe</h4>
+  <p>{{ today | date }}</p>
+  <p>{{ today | date: 'y-MM-dd'}}</p>
+
+  <p>
+    <button (click)="toggleFormat()">Toggle Format</button>
+    {{ birthday | date:format }}
+  </p>
+</div>
+
+<div class="box">
+  <h4>JsonPipe</h4>
+  <pre>{{jsonObject | json}}</pre>
+</div>
+
+<div class="box">
+  <h4>UpperCasePipe</h4>
+  {{ 'aBc' | uppercase}}
+</div>
+
+<div class="box">
+  <h4>LowerCasePipe</h4>
+  {{ 'AbC' | lowercase}}
+</div>
+
+<div class="box">
+  <h4>DecimalPipe</h4>
+  <p>aa ：{{aa | number: '3.4-5'}}</p>
+  <p>bb ：{{bb | number: '3.1-5'}}</p>
+</div>
+
+<div class="box">
+  <h4>CurrencyPipe</h4>
+  <p>ac ：{{ ac | currency: 'USD': false }}</p>
+  <p>bc ：{{ bc | currency: 'CNY': true: '3.1-3'}}</p>
+</div>
+
+<div class="box">
+  <h4>PercentPipe</h4>
+  <p>ad ：{{ ad | percent }}</p>
+  <p>bd ：{{ bd | percent: '3.1-3' }}</p>
+</div>
+
+<div class="box">
+  <h4>SlicePipe</h4>
+  <p>{{ 'abcdef' | slice: 2 : 4}}</p>
+  <p>
+    <span *ngFor="let a of ([1, 'b', 3, 'c', 4] | slice: 2)">
+      {{a}}
+    </span>
+  </p>
+</div>
+
+<div class="box">
+  <h4>TitleCasePipe</h4>
+  <p>{{ 'abbcd' | titlecase }}</p>
+</div>
+
+<div class="box">
+  <h4>自定义管道sort</h4>
+  <p>
+    <li *ngFor="let a of (arr | sort)">{{a}}</li>
+  </p>
+</div>

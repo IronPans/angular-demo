@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,MAAO;EACL,MAAM,EAAE,IAAI",
+"sources": ["demo-directive.component.scss"],
+"names": [],
+"file": "demo-directive.component.css"
+}

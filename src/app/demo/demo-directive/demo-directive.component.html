@@ -1,0 +1,50 @@
+<button appButton>指令按钮</button>
+
+  <button appButton="额外名称">指令按钮</button>
+
+
+<div class="box">
+  <button (click)="isShow = !isShow">点击试试</button>
+  <div *ngIf="isShow">ngIf结构型指令</div>
+</div>
+
+<div class="box">
+  <button (click)="isShowElse = !isShowElse">点击试试ngIf else</button>
+  <div *ngIf="isShowElse else next">ngIf结构型指令中的else</div>
+  <ng-template #next>else效果</ng-template>
+</div>
+
+
+<div style="padding-left: 50px" class="box">
+  <h4>基础ngFor</h4>
+  <ul>
+    <li *ngFor="let book of books">{{book}}</li>
+  </ul>
+</div>
+
+<div style="padding-left: 50px" class="box">
+  <h4>带索引</h4>
+  <ul>
+    <li *ngFor="let book of books; index as i">{{i + ':' + book}}</li>
+  </ul>
+</div>
+
+<div class="box">
+  <h4>ngSwitch</h4>
+  <select [(ngModel)]="animal">
+    <option value="">默认</option>
+    <option value="dog">dog</option>
+    <option value="cat">cat</option>
+  </select>
+  <div [ngSwitch]="animal">
+    <div *ngSwitchCase="'dog'">汪</div>
+    <div *ngSwitchCase="'cat'">喵</div>
+    <div *ngSwitchDefault>哼</div>
+  </div>
+</div>
+
+<div class="box">
+  <h4>自定义结构型指令</h4>
+  <button (click)="isMyShow = !isMyShow">点击试试</button>
+  <div *appMyIf="isMyShow">自定义结构型指令appMyIf</div>
+</div>
