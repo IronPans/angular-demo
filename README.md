@@ -24,10 +24,6 @@
 
 - 动画(Animation)
 
-关于这一系列文章的例子可以到这里下载：[Github](https://github.com/IronPans/angular-demo)
-```
-git clone https://github.com/IronPans/angular-demo
-```
 下载下来后，需要如下步骤启动项目：
 - 打开终端
 - 输入以下命令
