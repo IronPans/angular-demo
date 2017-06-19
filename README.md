@@ -32,6 +32,8 @@
 ```
 cd angular-demo
 
+npm install
+
 npm start
 ```
 当然，你首先要安装`@angular/cli`，如果还没安装，可以看第一章《[Angular CLI](http://ghmagical.com/article/page/id/na7zoYaTCXmK)》。
