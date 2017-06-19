@@ -22,7 +22,7 @@
 
 - [路由导航(Router)](http://ghmagical.com/article/page/id/xIT4VfvbWHXi)
 
-- 动画(Animation)
+- [动画(Animation)](http://ghmagical.com/article/page/id/MdysVNc4H22K)
 
 下载下来后，需要如下步骤启动项目：
 - 打开终端
