@@ -24,6 +24,8 @@
 
 - [动画(Animation)](http://ghmagical.com/article/page/id/MdysVNc4H22K)
 
+- 安全路由
+
 下载下来后，需要如下步骤启动项目：
 - 打开终端
 - 输入以下命令
