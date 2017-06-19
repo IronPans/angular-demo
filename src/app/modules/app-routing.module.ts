@@ -13,6 +13,10 @@ import {DemoFormComponent} from '../demo/demo-form/demo-form.component';
 import {DemoRouter2Component} from '../demo/demo-router2/demo-router2.component';
 import {DemoChildRouterComponent} from '../demo/demo-child-router/demo-child-router.component';
 import {DemoChildRouter2Component} from '../demo/demo-child-router2/demo-child-router2.component';
+import {DemoGuardComponent} from '../demo/demo-guard/demo-guard.component';
+import {DemoImageComponent} from '../demo/demo-image/demo-image.component';
+import {AuthGuard} from '../guard/auth.guard';
+import {DemoGuardChildComponent} from "../demo/demo-guard-child/demo-guard-child.component";
 
 const routes: Routes = [
   {path: 'demoComponent', component: DemoComponentComponent},
@@ -39,6 +43,22 @@ const routes: Routes = [
     }]
   },
   {path: 'demoAnimation', component: DemoAnimationComponent},
+  {
+    path: 'demoGuard',
+    component: DemoGuardComponent,
+    children: [
+      {
+        path: '',
+        canActivateChild: [AuthGuard],
+        children: [
+          { path: 'child', component: DemoGuardChildComponent}
+        ]
+      }
+    ]
+  },
+  { path: 'images',
+    canActivate: [AuthGuard],
+    component: DemoImageComponent},
   {path: '**', component: DemoComponentComponent}
 ];
 
@@ -46,7 +66,8 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes)
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [AuthGuard]
 })
 export class AppRoutingModule {
 }

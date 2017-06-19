@@ -1,0 +1,12 @@
+<div class="box">
+  <p>账号是123，密码也是123</p>
+  <p>
+    <input type="text" #account>
+    <input type="password" #pwd>
+    <button (click)="onSubmit(account.value, pwd.value)">登录</button>
+  </p>
+
+  <p><a routerLink="/images">这是个照片链接，你懂得。</a></p>
+
+  <p><a routerLink="/demoGuard/child">安全子路由守卫</a></p>
+</div>

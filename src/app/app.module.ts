@@ -25,6 +25,9 @@ import { DemoAnimationComponent } from './demo/demo-animation/demo-animation.com
 import { DemoRouter2Component } from './demo/demo-router2/demo-router2.component';
 import { DemoChildRouterComponent } from './demo/demo-child-router/demo-child-router.component';
 import { DemoChildRouter2Component } from './demo/demo-child-router2/demo-child-router2.component';
+import { DemoGuardComponent } from './demo/demo-guard/demo-guard.component';
+import { DemoImageComponent } from './demo/demo-image/demo-image.component';
+import { DemoGuardChildComponent } from './demo/demo-guard-child/demo-guard-child.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +50,10 @@ import { DemoChildRouter2Component } from './demo/demo-child-router2/demo-child-
     DemoAnimationComponent,
     DemoRouter2Component,
     DemoChildRouterComponent,
-    DemoChildRouter2Component
+    DemoChildRouter2Component,
+    DemoGuardComponent,
+    DemoImageComponent,
+    DemoGuardChildComponent
   ],
   imports: [
     BrowserModule,

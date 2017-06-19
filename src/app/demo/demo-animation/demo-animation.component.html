@@ -1,3 +1,27 @@
 <div class="box">
-  请等待，内容在连载中......
+  <button (click)="toActive()">按钮</button>
+
+  <div style="width: 50px;height: 50px;" [@colorState]="isActive ? 'active' : 'inactive'"></div>
 </div>
+
+<div class="box">
+  <button (click)="toIn()">按钮</button>
+
+  <div style="width: 50px;height: 50px;background: red" *ngIf="isIn" [@moveInState]></div>
+</div>
+
+<div class="box">
+  <button (click)="open()">按钮</button>
+  <div style="background: red;overflow: hidden;" [@expandState]="expandClass">
+  	<div style="padding: 20px">我是自动属性</div>
+  </div>
+</div>
+
+<div class="box">
+  <button (click)="open2()">按钮</button>
+  <div style="background: red;overflow: hidden;" [@expandState]="expandClass2" (@expandState.start)="transitionStart($event)" (@expandState.done)="transitionEnd($event)">
+  	<div style="padding: 20px">我是自动属性</div>
+  </div>
+  <p>{{state}}</p>
+</div>
+
