@@ -24,7 +24,9 @@
 
 - [动画(Animation)](http://ghmagical.com/article/page/id/MdysVNc4H22K)
 
-- 安全路由
+- [安全路由](http://ghmagical.com/article/page/id/b8uJOlMvlQDA)
+
+- 动态模板和动态组件
 
 下载下来后，需要如下步骤启动项目：
 - 打开终端
