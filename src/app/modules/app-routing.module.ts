@@ -16,7 +16,9 @@ import {DemoChildRouter2Component} from '../demo/demo-child-router2/demo-child-r
 import {DemoGuardComponent} from '../demo/demo-guard/demo-guard.component';
 import {DemoImageComponent} from '../demo/demo-image/demo-image.component';
 import {AuthGuard} from '../guard/auth.guard';
-import {DemoGuardChildComponent} from "../demo/demo-guard-child/demo-guard-child.component";
+import {DemoGuardChildComponent} from '../demo/demo-guard-child/demo-guard-child.component';
+import {AuthChildGuard} from '../guard/authChildGuard';
+import {CanDeactivateGuard} from "../guard/canDeactivateGuard";
 
 const routes: Routes = [
   {path: 'demoComponent', component: DemoComponentComponent},
@@ -46,19 +48,22 @@ const routes: Routes = [
   {
     path: 'demoGuard',
     component: DemoGuardComponent,
+    canDeactivate: [CanDeactivateGuard],
     children: [
       {
         path: '',
-        canActivateChild: [AuthGuard],
+        canActivateChild: [AuthChildGuard],
         children: [
-          { path: 'child', component: DemoGuardChildComponent}
+          {path: 'child', component: DemoGuardChildComponent}
         ]
       }
     ]
   },
-  { path: 'images',
+  {
+    path: 'images',
     canActivate: [AuthGuard],
-    component: DemoImageComponent},
+    component: DemoImageComponent
+  },
   {path: '**', component: DemoComponentComponent}
 ];
 
@@ -67,7 +72,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   exports: [RouterModule],
-  providers: [AuthGuard]
+  providers: [AuthGuard, AuthChildGuard, CanDeactivateGuard]
 })
 export class AppRoutingModule {
 }

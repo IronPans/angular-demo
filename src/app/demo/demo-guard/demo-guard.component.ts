@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DemoGuardComponent implements OnInit {
 
+  name: string = '123';
   constructor() {
     localStorage.clear();
   }

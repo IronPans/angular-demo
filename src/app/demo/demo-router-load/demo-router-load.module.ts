@@ -5,7 +5,7 @@ import {DemoRouterLoadRougingModule} from './demo-router-load-routing.module';
 
 @NgModule({
   imports: [CommonModule, DemoRouterLoadRougingModule],
-  declarations: [DemoRouterLoadComponent]
+  declarations: [DemoRouterLoadComponent] 
 })
 
 export class RouterLoadModule {}

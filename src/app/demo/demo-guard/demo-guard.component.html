@@ -6,7 +6,18 @@
     <button (click)="onSubmit(account.value, pwd.value)">登录</button>
   </p>
 
-  <p><a routerLink="/images">这是个照片链接，你懂得。</a></p>
+  <p><a routerLink="/images">这是个照片链接，请输入上面的账号和密码登录。</a></p>
 
+</div>
+
+<div class="box">
   <p><a routerLink="/demoGuard/child">安全子路由守卫</a></p>
+</div>
+
+
+<div class="box">
+  <h4> CanDeactivateGuard</h4>
+  <p>
+    <input type="text" [(ngModel)]="name"> (尝试修改表单的内容，然后点击其他页面)
+  </p>
 </div>
