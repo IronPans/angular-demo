@@ -1,0 +1,20 @@
+<div class="box" style="padding-left: 40px">
+  <h4>动态模板: 注入</h4>
+  <ng-template #tpl>
+    <button (click)="onclick()">点击试试</button>
+  </ng-template>
+  <app-trend-template [template]="tpl"></app-trend-template>
+</div>
+
+<div class="box" style="padding-left: 40px">
+  <h4>动态模板: @ViewChild</h4>
+  <ng-template #tpl2>
+    <button (click)="onclick()">点击试试</button>
+  </ng-template>
+  <div #viewcontainer></div>
+</div>
+
+<div class="box" style="padding-left: 40px">
+  <h4>动态组件</h4>
+  <div #trendViewContainer></div>
+</div>

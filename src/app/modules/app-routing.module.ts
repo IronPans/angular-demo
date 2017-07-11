@@ -19,6 +19,7 @@ import {AuthGuard} from '../guard/auth.guard';
 import {DemoGuardChildComponent} from '../demo/demo-guard-child/demo-guard-child.component';
 import {AuthChildGuard} from '../guard/authChildGuard';
 import {CanDeactivateGuard} from "../guard/canDeactivateGuard";
+import {DemoTrendComponent} from '../demo/demo-trend/demo-trend.component';
 
 const routes: Routes = [
   {path: 'demoComponent', component: DemoComponentComponent},
@@ -64,6 +65,7 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     component: DemoImageComponent
   },
+  {path: 'demoTrend', component: DemoTrendComponent},
   {path: '**', component: DemoComponentComponent}
 ];
 

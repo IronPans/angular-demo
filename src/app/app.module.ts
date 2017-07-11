@@ -28,6 +28,9 @@ import { DemoChildRouter2Component } from './demo/demo-child-router2/demo-child-
 import { DemoGuardComponent } from './demo/demo-guard/demo-guard.component';
 import { DemoImageComponent } from './demo/demo-image/demo-image.component';
 import { DemoGuardChildComponent } from './demo/demo-guard-child/demo-guard-child.component';
+import { DemoTrendComponent } from './demo/demo-trend/demo-trend.component';
+import { TrendTemplateComponent } from './components/trend-template/trend-template.component';
+import { TrendComponentComponent } from './components/trend-component/trend-component.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +56,10 @@ import { DemoGuardChildComponent } from './demo/demo-guard-child/demo-guard-chil
     DemoChildRouter2Component,
     DemoGuardComponent,
     DemoImageComponent,
-    DemoGuardChildComponent
+    DemoGuardChildComponent,
+    DemoTrendComponent,
+    TrendTemplateComponent,
+    TrendComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -62,6 +68,7 @@ import { DemoGuardChildComponent } from './demo/demo-guard-child/demo-guard-chil
     AppRoutingModule,
     BrowserAnimationsModule
   ],
+  entryComponents: [TrendComponentComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
